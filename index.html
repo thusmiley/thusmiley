@@ -379,11 +379,22 @@
               action="./thank-you.html"
               method="POST"
               data-netlify="true"
-              onsubmit="return false"
               name="contact"
             >
-              <input type="text" id="name" name="name" placeholder="NAME*" required />
-              <input type="email" id="email" name="email" placeholder="EMAIL*" required />
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="NAME*"
+                required
+              />
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="EMAIL*"
+                required
+              />
               <textarea
                 id="message"
                 name="message"
@@ -391,12 +402,7 @@
                 placeholder="MESSAGE*"
                 required
               ></textarea>
-              <input
-                type="submit"
-                id="submit"
-                value="SEND MESSAGE"
-                onclick="sendContact()"
-              />
+              <input type="submit" id="submit" value="SEND MESSAGE" />
             </form>
           </div>
         </div>
