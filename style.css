@@ -148,8 +148,8 @@ main {
     top: -80px;
   }
   .hero-img .circle {
-    bottom: -4px;
-    left: 78%;
+    bottom: 20px;
+    left: -64.5px;
   }
 }
 
@@ -199,8 +199,8 @@ main {
     top: 30px;
   }
   .hero-img .circle {
-    bottom: -86px;
-    left: 81%;
+    bottom: -50px;
+    left: 60%;
   }
 }
 
