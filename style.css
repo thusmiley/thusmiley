@@ -426,6 +426,7 @@ textarea {
   font-size: 16px;
   line-height: 26px;
   letter-spacing: -0.22px;
+  border-radius: 0px;
 }
 
 textarea:focus, input:focus {
@@ -444,6 +445,7 @@ input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
   -webkit-box-shadow: 0 0 0 30px #242424 inset !important;
   -webkit-text-fill-color: white !important;
+  background-clip: content-box !important;
 }
 
 #submit {
@@ -594,6 +596,13 @@ footer .container p {
 @media screen and (max-width: 720px) {
   .thank-you {
     height: 73vh;
+  }
+  .thank-you h1 {
+    font-size: 40px;
+  }
+  .thank-you p {
+    width: 343px;
+    margin: 10px auto 40px auto;
   }
 }
 /*# sourceMappingURL=style.css.map */

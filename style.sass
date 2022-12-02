@@ -316,6 +316,7 @@ textarea
     font-size: 16px
     line-height: 26px
     letter-spacing: -0.22px
+    border-radius: 0px
 textarea:focus, input:focus
     color: white
     font-weight: bold
@@ -329,6 +330,7 @@ input:-webkit-autofill:focus,
 input:-webkit-autofill:active
     -webkit-box-shadow: 0 0 0 30px $gray inset !important
     -webkit-text-fill-color: white !important    
+    background-clip: content-box !important
 
 #submit
     width: auto
@@ -430,3 +432,8 @@ footer
 @media screen and (max-width: 720px)  
     .thank-you
         height: 73vh
+        h1
+            font-size: 40px
+        p
+            width: 343px
+            margin: 10px auto 40px auto    
