@@ -14,6 +14,9 @@ body
     background-color: black    
     font-family: 'Roboto', sans-serif
     color: white
+    transition: 1s ease-in
+    position: relative
+    min-height: 100vh
 
 h1
     font-size: 88px
@@ -61,25 +64,34 @@ ul
     &:hover
         color: $orange
 
-    // Header - Nav    
+    // Header - Nav   
+header        
+    position: absolute
+    top: 0
+    height: 98px
+    width: 100%         
 .logo
     font-family: 'Josefin Sans', sans-serif    
-    margin-top: 40px
+    margin-top: 32px
+
+@media screen and (max-width: 720px)  
+    header
+        height: 64px    
 
     // Hero section
 main
     background-image: url("./assets/images/pattern-rings.svg")
     background-repeat: no-repeat
     background-position: -100px 62px
+    padding: 90px 0 128px 0       
 
 .hero
     display: flex    
     margin-bottom: 150px
     position: relative
 .hero-content
-    margin-top: 127px    
+    margin-top: 70px    
     width: 60%
-    // position: absolute
     span
         border-bottom: 6px solid $orange
     p
@@ -92,7 +104,7 @@ main
         position: absolute
         z-index: -1
         right: 0
-        top: -72px
+        top: -90px
     .circle
         position: absolute
         bottom: 50px
@@ -114,11 +126,11 @@ main
         margin-top: 90px    
         width: 59%    
         p
-            margin: 60px 0px 34px 0px   
+            margin: 50px 0px 34px 0px   
     .hero-img
         width: 42%
         .profile-img
-            top: -80px
+            top: -90px
         .circle
             bottom: 20px
             left: -64.5px
@@ -159,7 +171,6 @@ main
         bottom: -70px
         left: 60%
         width: 60px
-
 
 // Skillset section       
 .languages
@@ -293,7 +304,7 @@ picture
         padding: 84px 0 92px 0
         border-bottom: 1px solid white     
         display: flex
-
+        z-index: 3
 .contact-content,
 .contact-form
     width: 50%            
@@ -317,12 +328,15 @@ textarea
     line-height: 26px
     letter-spacing: -0.22px
     border-radius: 0px
+    font-weight: bold
+
 textarea:focus, input:focus
     color: white
     font-weight: bold
     outline: none
 input, select, textarea
     color: white
+    font-weight: bold
 
 input:-webkit-autofill,
 input:-webkit-autofill:hover, 
@@ -331,6 +345,7 @@ input:-webkit-autofill:active
     -webkit-box-shadow: 0 0 0 30px $gray inset !important
     -webkit-text-fill-color: white !important    
     background-clip: content-box !important
+    font-weight: bold !important
 
 #submit
     width: auto
@@ -383,8 +398,12 @@ input:-webkit-autofill:active
 
 // Footer    
 footer
-    background-color: $gray    
-    padding: 47px 0 92px 0
+    background-color: $gray
+    padding: 36px 0 92px 0
+    position: absolute
+    bottom: 0
+    width: 100%
+    height: 128px
     .container
         display: flex
         justify-content: space-between
@@ -397,12 +416,11 @@ footer
     &:hover
         filter: invert(0.4) sepia(1) saturate(18.8) hue-rotate(0deg) brightness(0.94)
 
-@media screen and (max-width: 1150px)
-    footer
-        padding: 30px 0 40px 0
-
 @media screen and (max-width: 720px)  
+    main
+        padding-bottom: 171px
     footer
+        height: 171px
         padding: 39px 0 60px 0
         .container
             flex-direction: column-reverse
@@ -420,20 +438,17 @@ footer
 .thank-you
     background-position: left -200px top 30px
     text-align: center
-    padding: 100px 0
-    height: 72.2vh
+    padding: 98px 0 128px 0       
+    h1
+        margin-top: 66px
     p
         margin: 25px  0 50px 0
 
-@media screen and (max-width: 1150px)   
-    .thank-you
-        height: 79.4vh
-
 @media screen and (max-width: 720px)  
     .thank-you
-        height: 73vh
         h1
             font-size: 40px
+            margin-top: 32px
         p
             width: 343px
             margin: 10px auto 40px auto    

@@ -10,6 +10,10 @@ body {
   background-color: black;
   font-family: 'Roboto', sans-serif;
   color: white;
+  -webkit-transition: 1s ease-in;
+  transition: 1s ease-in;
+  position: relative;
+  min-height: 100vh;
 }
 
 h1 {
@@ -69,15 +73,29 @@ ul {
   color: #FF8C00;
 }
 
+header {
+  position: absolute;
+  top: 0;
+  height: 98px;
+  width: 100%;
+}
+
 .logo {
   font-family: 'Josefin Sans', sans-serif;
-  margin-top: 40px;
+  margin-top: 32px;
+}
+
+@media screen and (max-width: 720px) {
+  header {
+    height: 64px;
+  }
 }
 
 main {
   background-image: url("./assets/images/pattern-rings.svg");
   background-repeat: no-repeat;
   background-position: -100px 62px;
+  padding: 90px 0 128px 0;
 }
 
 .hero {
@@ -89,7 +107,7 @@ main {
 }
 
 .hero-content {
-  margin-top: 127px;
+  margin-top: 70px;
   width: 60%;
 }
 
@@ -111,7 +129,7 @@ main {
   position: absolute;
   z-index: -1;
   right: 0;
-  top: -72px;
+  top: -90px;
 }
 
 .hero-img .circle {
@@ -139,13 +157,13 @@ main {
     width: 59%;
   }
   .hero-content p {
-    margin: 60px 0px 34px 0px;
+    margin: 50px 0px 34px 0px;
   }
   .hero-img {
     width: 42%;
   }
   .hero-img .profile-img {
-    top: -80px;
+    top: -90px;
   }
   .hero-img .circle {
     bottom: 20px;
@@ -395,6 +413,7 @@ picture {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  z-index: 3;
 }
 
 .contact-content,
@@ -427,6 +446,7 @@ textarea {
   line-height: 26px;
   letter-spacing: -0.22px;
   border-radius: 0px;
+  font-weight: bold;
 }
 
 textarea:focus, input:focus {
@@ -437,6 +457,7 @@ textarea:focus, input:focus {
 
 input, select, textarea {
   color: white;
+  font-weight: bold;
 }
 
 input:-webkit-autofill,
@@ -446,6 +467,7 @@ input:-webkit-autofill:active {
   -webkit-box-shadow: 0 0 0 30px #242424 inset !important;
   -webkit-text-fill-color: white !important;
   background-clip: content-box !important;
+  font-weight: bold !important;
 }
 
 #submit {
@@ -520,7 +542,11 @@ input:-webkit-autofill:active {
 
 footer {
   background-color: #242424;
-  padding: 47px 0 92px 0;
+  padding: 36px 0 92px 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 128px;
 }
 
 footer .container {
@@ -546,14 +572,12 @@ footer .container p {
           filter: invert(0.4) sepia(1) saturate(18.8) hue-rotate(0deg) brightness(0.94);
 }
 
-@media screen and (max-width: 1150px) {
-  footer {
-    padding: 30px 0 40px 0;
-  }
-}
-
 @media screen and (max-width: 720px) {
+  main {
+    padding-bottom: 171px;
+  }
   footer {
+    height: 171px;
     padding: 39px 0 60px 0;
   }
   footer .container {
@@ -579,26 +603,21 @@ footer .container p {
 .thank-you {
   background-position: left -200px top 30px;
   text-align: center;
-  padding: 100px 0;
-  height: 72.2vh;
+  padding: 98px 0 128px 0;
+}
+
+.thank-you h1 {
+  margin-top: 66px;
 }
 
 .thank-you p {
   margin: 25px  0 50px 0;
 }
 
-@media screen and (max-width: 1150px) {
-  .thank-you {
-    height: 79.4vh;
-  }
-}
-
 @media screen and (max-width: 720px) {
-  .thank-you {
-    height: 73vh;
-  }
   .thank-you h1 {
     font-size: 40px;
+    margin-top: 32px;
   }
   .thank-you p {
     width: 343px;
